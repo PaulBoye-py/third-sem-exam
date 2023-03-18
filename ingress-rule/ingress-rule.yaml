@@ -8,7 +8,7 @@ metadata:
    # nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
-  - host: sock-app.paul-roju.me
+  - host: sock-app.paulboye.live
     http:
       path:
         backend:
@@ -27,7 +27,7 @@ metadata:
     kubernetes.io/ingress.class: nginx 
 spec:
   rules:
-  - host: voting.paul-roju.me
+  - host: voting.paulboye.live
     http:
       path:
         backend:
