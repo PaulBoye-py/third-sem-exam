@@ -9,10 +9,10 @@ terraform {
 
 provider "acme" {
   # Staging Server to test
-  server_url = "https://acme-staging-v02.api.letsencrypt.org/directory"
+  # server_url = "https://acme-staging-v02.api.letsencrypt.org/directory"
 
   # Production-ready server
-  # server_url = "https://acme-v02.api.letsencrypt.org/directory"
+  server_url = "https://acme-v02.api.letsencrypt.org/directory"
 }
 
 data "aws_route53_zone" "base_domain" {
