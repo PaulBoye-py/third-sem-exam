@@ -59,5 +59,16 @@ pipeline {
                 }
             }
         }
+
+        stage("Apply Lets Encrypt SSL Certificates") {
+            steps {
+                script {
+                    dir('ssl') {
+                        sh "terraform init"
+                        sh "terraform apply -auto-approve"
+                    }
+                }
+            }
+        }
     }
 }
