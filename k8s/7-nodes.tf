@@ -55,35 +55,9 @@ resource "aws_eks_node_group" "private-nodes" {
     role = "general"
   }
 
-  # taint {
-  #   key    = "team"
-  #   value  = "devops"
-  #   effect = "NO_SCHEDULE"
-  # }
-
-  # launch_template {
-  #   name    = aws_launch_template.eks-with-disks.name
-  #   version = aws_launch_template.eks-with-disks.latest_version
-  # }
-
   depends_on = [
     aws_iam_role_policy_attachment.nodes-AmazonEKSWorkerNodePolicy,
     aws_iam_role_policy_attachment.nodes-AmazonEKS_CNI_Policy,
     aws_iam_role_policy_attachment.nodes-AmazonEC2ContainerRegistryReadOnly,
   ]
 }
-
-# resource "aws_launch_template" "eks-with-disks" {
-#   name = "eks-with-disks"
-
-#   key_name = "local-provisioner"
-
-#   block_device_mappings {
-#     device_name = "/dev/xvdb"
-
-#     ebs {
-#       volume_size = 50
-#       volume_type = "gp2"
-#     }
-#   }
-# }
