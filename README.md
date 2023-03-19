@@ -44,8 +44,7 @@ I have divided the terraform modules and files into different files based on the
 
   - [`providers-nginx.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/nginx-controller/providers-nginx.tf) interacts with the resources provided by k8s.
 
-  - [`values.yaml`](https://github.com/PaulBoye-py/third-sem-exam/tree/main/nginx-controller/values.yaml) contains the default config for my nginx controller. 
-
+  - [`values.yaml`](https://github.com/PaulBoye-py/third-sem-exam/tree/main/nginx-controller/values.yaml) contains the default config for my nginx controller.
 
 - The [`prometheus`](https://github.com/PaulBoye-py/third-sem-exam/tree/main/prometheus) contains the files to create and setup prometheus.
 

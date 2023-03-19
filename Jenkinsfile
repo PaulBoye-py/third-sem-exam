@@ -60,7 +60,7 @@ pipeline {
             }
         }
 
-        stage("Apply Lets Encrypt SSL Certificates") {
+        stage("Apply SSL Certificates") {
             steps {
                 script {
                     dir('ssl') {
