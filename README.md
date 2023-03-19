@@ -6,7 +6,7 @@ I have divided the terraform modules and files into different files based on the
 
 - The [`k8s`](https://github.com/PaulBoye-py/third-sem-exam/tree/main/k8s) folder contains the terraform files to provide my k8s cluster called `demo`. Under the `eks-cluster` folder, there are 11 terraform files, each performing different tasks.
 
-  - [`provider,tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/k8s/provider.tf) file sets `aws` as my provider, with a corresponding region, allowing Terraform to be able to interact with `aws`.
+  - [`provider.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/k8s/provider.tf) file sets `aws` as my provider, with a corresponding region, allowing Terraform to be able to interact with `aws`.
 
   - [`vpc-igw.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/k8s/vpc-igw.tf) file creates a VPC on `aws` called `main` and creates an internet gateway for my `main` vpc, allowing communication between my vpc and the internet.
 
