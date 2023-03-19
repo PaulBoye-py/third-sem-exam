@@ -14,7 +14,7 @@ I have divided the terraform modules and files into different files based on the
 
     -[`nat-gateway.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/k8s/nat-gateway.tf) creates a `nat` gateway for communication between between instances in my `private subnets` and external services.
 
-  - [`5-routes.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/eks-cluster/5-routes.tf) creates private and public route tables for my `main` vpc. It also associates the private subnets with the private route tables, and public subnets with the public route tables.
+  - [`routes.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/k8s/routes.tf) creates private and public route tables for my `main` vpc. It also associates the private subnets with the private route tables, and public subnets with the public route tables.
 
   - [`6-eks.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/eks-cluster/6-eks.tf) creates my eks cluster called `demo`, and attaches an IAM role policy to it.
 
