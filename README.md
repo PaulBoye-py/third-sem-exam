@@ -18,7 +18,7 @@ I have divided the terraform modules and files into different files based on the
 
   - [`main-eks.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/k8s/main-eks.tf) creates my eks cluster called `demo`, and attaches an IAM role policy to it.
 
-  - [`7-nodes.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/eks-cluster/7-nodes.tf) creates the nodes within my `demo` cluster and configures them.
+  - [`eks-nodes.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/k8s/eks-nodes.tf) creates the nodes within my `demo` cluster and configures them.
 
   - [`8-iam-oidc.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/eks-cluster/8-iam-oidc.tf) provides an IAM OpenID Connect provider.
 
