@@ -17,7 +17,7 @@ pipeline {
             }
             steps {
                 script {
-                    dir('eks-cluster') {
+                    dir('k8s') {
                         sh "terraform init"
                         sh "terraform apply -auto-approve"
                     }
