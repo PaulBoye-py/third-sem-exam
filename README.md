@@ -24,7 +24,7 @@ I have divided the terraform modules and files into different files based on the
 
   - [`iam-test.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/k8s/iam-test.tf) provides and attaches IAM roles and policies.
 
-  - [`10-iam-autoscaler.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/eks-cluster/10-iam-autoscaler.tf) contains configuration for autoscaling the cluster.
+  - [`eks-iam-autoscaler.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/k8s/eks-iam-autoscaler.tf) contains configuration for autoscaling the cluster.
 
   - [`jenkins`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/eks-cluster/jenkins)- I ended up merging all the Jenkins pipeline code to a central file in the root directory.
 
