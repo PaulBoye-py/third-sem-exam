@@ -31,7 +31,7 @@ pipeline {
             }
             steps {
                 script {
-                    dir('eks-cluster') {
+                    dir('k8s') {
                         sh "terraform destroy -auto-approve"
                     }
                 }
