@@ -8,9 +8,7 @@ I have divided the terraform modules and files into different files based on the
 
   - [`provider,tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/k8s/provider.tf) file sets `aws` as my provider, with a corresponding region, allowing Terraform to be able to interact with `aws`.
 
-  - [`1-vpc.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/eks-cluster/1-vpc.tf) file creates a VPC on `aws` called `main`.
-
-  - [`2-igw.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/eks-cluster/2-igw.tf) creates an internet gateway for my `main` vpc, allowing communication between my vpc and the internet.
+  - [`vpc-igw.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/k8s/vpc-igw.tf) file creates a VPC on `aws` called `main` and creates an internet gateway for my `main` vpc, allowing communication between my vpc and the internet. 
 
   - [`3-subnets.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/eks-cluster/3-subnets.tf) creates 2 private subnets, and 2 public subnets within `main` vpc.
 
