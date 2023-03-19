@@ -20,7 +20,7 @@ I have divided the terraform modules and files into different files based on the
 
   - [`eks-nodes.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/k8s/eks-nodes.tf) creates the nodes within my `demo` cluster and configures them.
 
-  - [`8-iam-oidc.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/eks-cluster/8-iam-oidc.tf) provides an IAM OpenID Connect provider.
+  - [`iam-oidc.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/k8s/iam-oidc.tf) provides an IAM OpenID Connect provider.
 
   - [`9-iam-test.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/eks-cluster/9-iam-test.tf) provides and attaches IAM roles and policies.
 
