@@ -4,7 +4,7 @@
 
 I have divided the terraform modules and files into different files based on the actions they perform.
 
-- The [`k8s`](https://github.com/PaulBoye-py/third-sem-exam/tree/main/k8s) folder contains the terraform files to provide my k8s cluster called `demo`. Under the `k8s` folder, there are 11 terraform files, each performing different tasks.
+- The [k8s](https://github.com/PaulBoye-py/third-sem-exam/tree/main/k8s) folder contains the terraform files to provide my k8s cluster called `demo`. Under the `k8s` folder, there are 11 terraform files, each performing different tasks.
 
   - [`provider.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/k8s/provider.tf) file sets `aws` as my provider, with a corresponding region, allowing Terraform to be able to interact with `aws`.
 
@@ -44,7 +44,7 @@ I have divided the terraform modules and files into different files based on the
 
   - [`values.yaml`](https://github.com/PaulBoye-py/third-sem-exam/tree/main/nginx-controller/values.yaml) contains the default config for my nginx controller.
 
-- The [`prometheus`](https://github.com/PaulBoye-py/third-sem-exam/tree/main/prometheus) contains the files to create and setup prometheus.
+- The [prometheus](https://github.com/PaulBoye-py/third-sem-exam/tree/main/prometheus) contains the files to create and setup prometheus.
 
   - [`helm-prone`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/prometheus/helm-prome.tf) creates a k8s namespace called `kube-namespace`, an instance of a helm chart running in a my k8s `main` cluster.
 
@@ -52,12 +52,12 @@ I have divided the terraform modules and files into different files based on the
 
   - [`values.yaml`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/prometheus/values.yaml) contains the configurations for Helm, including the default desired states.
 
-- The [`sock-shop`](https://github.com/PaulBoye-py/third-sem-exam/tree/main/sock-shop) contains the `yaml` file for the deployment of the `sock-shop` app and its associated services.
+- The [sock-shop](https://github.com/PaulBoye-py/third-sem-exam/tree/main/sock-shop) contains the `yaml` file for the deployment of the `sock-shop` app and its associated services.
 
-- The [`voting-app`](https://github.com/PaulBoye-py/third-sem-exam/tree/main/voting-app) contains the `yaml` file for the deployment of the `Azure Voting App` and its associated services.
+- The [voting-app](https://github.com/PaulBoye-py/third-sem-exam/tree/main/voting-app) contains the `yaml` file for the deployment of the `Azure Voting App` and its associated services.
 
-- The [`terraform-template`] file was used to test locally.
+- The [terraform-template] file was used to test locally.
 
-- [`eks-Jenkinsfile`] creates the pipeline for creating and destroying the k8s clusters.
+- [eks-Jenkinsfile] creates the pipeline for creating and destroying the k8s clusters.
 
-- [`Jenkinsfile`] creates the pipeline for creating the deployments for nginx-conroller, prometheus, and the apps.
+- [Jenkinsfile] creates the pipeline for creating the deployments for nginx-conroller, prometheus, and the apps.
