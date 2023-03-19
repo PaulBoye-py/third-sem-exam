@@ -4,14 +4,14 @@
 
 I have divided the terraform modules and files into different files based on the actions they perform.
 
-- The [`k8s`](https://github.com/PaulBoye-py/third-sem-exam/tree/main/k8s) folder contains the terraform files to provide my k8s cluster called `demo`. Under the `eks-cluster` folder, there are 11 terraform files, each performing different tasks.
+- The [`k8s`](https://github.com/PaulBoye-py/third-sem-exam/tree/main/k8s) folder contains the terraform files to provide my k8s cluster called `demo`. Under the `k8s` folder, there are 11 terraform files, each performing different tasks.
 
   - [`provider.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/k8s/provider.tf) file sets `aws` as my provider, with a corresponding region, allowing Terraform to be able to interact with `aws`.
 
   - [`vpc-igw.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/k8s/vpc-igw.tf) file creates a VPC on `aws` called `main` and creates an internet gateway for my `main` vpc, allowing communication between my vpc and the internet.
 
   - [`my-subnets.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/k8s/my-subnets.tf) creates 2 private subnets, and 2 public subnets within `main` vpc.
-    
+
   -[`nat-gateway.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/k8s/nat-gateway.tf) creates a `nat` gateway for communication between between instances in my `private subnets` and external services.
 
   - [`routes.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/k8s/routes.tf) creates private and public route tables for my `main` vpc. It also associates the private subnets with the private route tables, and public subnets with the public route tables.
