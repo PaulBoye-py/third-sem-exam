@@ -4,7 +4,7 @@
 
 I have divided the terraform modules and files into different files based on the actions they perform.
 
-- The [`eks-cluster`](https://github.com/PaulBoye-py/third-sem-exam/tree/main/eks-cluster) folder contains the terraform files to provide my k8s cluster called `demo`. Under the `eks-cluster` folder, there are 11 terraform files, each performing different tasks.
+- The [`k8s`](https://github.com/PaulBoye-py/third-sem-exam/tree/main/k8s) folder contains the terraform files to provide my k8s cluster called `demo`. Under the `eks-cluster` folder, there are 11 terraform files, each performing different tasks.
 
   - [`0-provider,tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/eks-cluster/0-provider.tf) file sets `aws` as my provider, with a corresponding region, allowing Terraform to be able to interact with `aws`.
 
