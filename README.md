@@ -181,4 +181,6 @@ I have divided the terraform blocks into different files based on the actions th
 
 - [Prometheus Documentation](https://prometheus.io/docs/introduction/overview/)
 
+- My instructors in AltSchool - Abu Ango, Kunrad, Val.
+
 - My friends and circle members in AltSchool - Tuyo, Teddy, Pat, Mayowa, Dami.
