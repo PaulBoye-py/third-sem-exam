@@ -56,8 +56,6 @@ I have divided the terraform blocks into different files based on the actions th
 
 - The [voting-app](https://github.com/PaulBoye-py/third-sem-exam/tree/main/voting-app) contains the `yaml` file for the deployment of the `Azure Voting App` and its associated services.
 
-- The [terraform-template] file was used to test locally.
+- [eks-Jenkinsfile](https://github.com/PaulBoye-py/third-sem-exam/blob/main/eks-Jenkinsfile) creates the pipeline for creating and destroying the k8s clusters.
 
-- [eks-Jenkinsfile] creates the pipeline for creating and destroying the k8s clusters.
-
-- [Jenkinsfile] creates the pipeline for creating the deployments for nginx-conroller, prometheus, and the apps.
+- [Jenkinsfile](https://github.com/PaulBoye-py/third-sem-exam/blob/main/Jenkinsfile) creates the pipeline for creating the deployments for nginx-conroller, prometheus, and the apps.
