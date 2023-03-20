@@ -1,5 +1,92 @@
 # AltSchool Third Semester Examination Repo
 
+## Setup Details
+
+1. Provision a webapp of your choosing with nginx/httpd frontend proxy and a database (mongo, postgresql etc) backend.
+2. Provision the Socks Shop example microservice application - <https://microservices-demo.github.io/>
+
+## Task Instructions
+
+- Everything needs to be deployed using an Infrastructure as Code approach.
+- In your solution please emphasize readability, maintainability and DevOps methodologies. We expect a clear way to recreate your setup and will evaluate the project decisions on:
+  - Deploy pipeline
+  - Metrics
+  - Monitoring
+  - Logging
+
+- Use Prometheus as a monitoring tool
+- Use Ansible or Terraform as the configuration management tool.
+- You can use an IaaS provider of your choice.
+- The application should run on Kubernetes.
+
+---
+
+## Requirements to run this repo
+
+- A VM control node.
+- AWS Account, IAM roles.
+
+You will need programmatic access to interact with AWS outside of the AWS Management Console. Creating an IAM role creates temporary credentials that consist of an access key ID, a secret access key, which you will use to configure AWS CLI. Download and keep the `.csv` file.
+
+---
+
+## How to Setup the VM Control Node
+
+This is the server that will be used to access Jenkins. Create an instance on any Cloud provider of your choice. Configure with the following specifications:
+
+- 4GB Memory
+- 2CPUs
+- Set a Security group and create ingress rules with the following values:
+
+    | **Type**   | **Protocol** | **Port Range** | **Source** |
+    | --------   | ------------ | -------------- | ---------- |
+    | Custom TCP | tcp          | 8080           | 0.0.0.0/0  |
+    | SSH        | tcp          | 22             | 0.0.0.0/0  |
+    | HTTPS      | tcp          | 443            | 0.0.0.0/0  |
+    | HTTP       | tcp          | 80             | 0.0.0.0/0  |
+
+Once created, ssh into the server. After this, clone this repository using command:
+
+```git
+git clone https://github.com/PaulBoye-py/third-sem-exam.git
+```
+
+cd into the repo with the command:
+
+```git
+cd third-sem-exam
+```
+
+In the repository, run this command to make the `script.sh` an executable file:
+
+```sh
+sudo chmod +x script.sh
+```
+
+Update the libraries and package manager repo, install all necessary dependencies, and start Jenkins:
+
+```sh
+./script.sh
+```
+
+Before moving to the next step, configure AWS CLI with the following command and insert the necessary information from the `.csv` file you downloaded from AWS IAM.
+
+```sh
+$ aws configure
+AWS Access Key ID [None]: AKIAIOSFODNN7EXAMPLE
+AWS Secret Access Key [None]: wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+Default region name [None]: us-west-2
+Default output format [None]: json
+```
+
+The server's public IP address will be shown after the infrastructure is finished, or you can get it from your cloud provider. SSH into jenkins with this url: <http://public-ip-address>:8080>. Jenkins will display the path to the password to unlock Jenkins. Run the command:
+
+```sh
+cat /directory-gotten-from-jenkins/
+```
+
+This will display the password to unlock Jenkins at  <http://public-ip-address>:8080>. You can log in to the server using this. Create a pipeline, set up your github and AWS credentials, and you're ready to begin.
+
 ## Folder Structure
 
 I have divided the terraform blocks into different files based on the actions they perform.
