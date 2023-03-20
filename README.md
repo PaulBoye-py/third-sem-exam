@@ -30,11 +30,11 @@ I have divided the terraform blocks into different files based on the actions th
 
 - The [nginx-ingress](https://github.com/PaulBoye-py/third-sem-exam/tree/main/nginx-ingress) contains the nginx ingress configuration files for the 2 applications which were deployed.
 
-  - [`ingress-rule.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/ingress-rule/ingress-rule.tf) contains the k8s nginx ingress for the `sock-shop` and `azure-vote-front` frontend services which were gotten online.
+  - [`ingress-rule.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/nginx-ingress/ingress-rule.tf) contains the k8s nginx ingress for the `sock-shop` and `azure-vote-front` frontend services which were gotten online.
 
-  - [`ingress-rule.yaml`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/ingress-rule/ingress-rule.yaml) is the same as above, just used it to test locally on minikube.
+  - [`ingress-rule.yaml`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/nginx-ingress/ingress-rule.yaml) is the same as above, just used it to test locally on minikube.
 
-  - [`provide.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/ingress-rule/provide.tf) interacts with the resources provided by k8s.
+  - [`provide.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/nginx-ingress/provide.tf) interacts with the resources provided by k8s.
 
 - The [nginx-controller](https://github.com/PaulBoye-py/third-sem-exam/tree/main/nginx-controller) contains files create the nginx controller.
 
