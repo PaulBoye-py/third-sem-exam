@@ -45,10 +45,10 @@ This is the server that will be used to access Jenkins. Create an instance on an
     | HTTPS      | tcp          | 443            | 0.0.0.0/0  |
     | HTTP       | tcp          | 80             | 0.0.0.0/0  |
 
-Once created, ssh into the server. After this, clone this repository using command:
+Once created, ssh into the server. After this, fork this repository, and clone to your VM using this command:
 
 ```git
-git clone https://github.com/PaulBoye-py/third-sem-exam.git
+git clone https://github.com/{your-github-username}/third-sem-exam.git
 ```
 
 cd into the repo with the command:
@@ -85,7 +85,19 @@ The server's public IP address will be shown after the infrastructure is finishe
 cat /directory-gotten-from-jenkins/
 ```
 
-This will display the password to unlock Jenkins at  <http://public-ip-address>:8080>. You can log in to the server using this. Create a pipeline, set up your github and AWS credentials, and you're ready to begin.
+This will display the password to unlock Jenkins at  <http://public-ip-address>:8080>. You can log in to the server using this.
+
+---
+
+## Deploying with Jenkins
+
+Once logged into Jenkins, you will be creating 2 pipelines. But before then, setup your github and AWS credentials on Jenkins.
+
+- The first pipeline will create an EKS Cluster using the terraform configuration files in the [`k8s`](https://github.com/PaulBoye-py/third-sem-exam/tree/main/k8s) file. Set up your Source Code Manager(SCM) as GitHub, select this repository, and select [`eks-Jenkinsfile`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/eks-Jenkinsfile) as the `Jenkinsfile` and continue to build the deployment.
+
+- The second pipeline will create the deployments for nginx-conroller, prometheus, and the apps using files in  [`nginx-ingress`](https://github.com/PaulBoye-py/third-sem-exam/tree/main/nginx-ingress), [`nginx-controller`](https://github.com/PaulBoye-py/third-sem-exam/tree/main/nginx-controller), [`prometheus`](https://github.com/PaulBoye-py/third-sem-exam/tree/main/prometheus), [`sock-shop`](https://github.com/PaulBoye-py/third-sem-exam/tree/main/sock-shop), and [`voting-app`](https://github.com/PaulBoye-py/third-sem-exam/tree/main/voting-app). Set up your Source Code Manager(SCM) as GitHub, select this repository, and select [`Jenkinsfile`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/Jenkinsfile) as the `Jenkinsfile` and continue to build the deployment.
+
+---
 
 ## Folder Structure
 
@@ -148,3 +160,25 @@ I have divided the terraform blocks into different files based on the actions th
 - [Jenkinsfile](https://github.com/PaulBoye-py/third-sem-exam/blob/main/Jenkinsfile) creates the pipeline for creating the deployments for nginx-conroller, prometheus, and the apps.
 
 - [script.sh](https://github.com/PaulBoye-py/third-sem-exam/blob/main/script.sh) installs necessary packages and repos needed for the Jenkins server to run.
+
+---
+
+## Resources that helped me
+
+- <https://youtu.be/RRdYFwlCHic> - How to request an SSL Certificate from ACM.
+
+- <https://youtu.be/8IWH1cYVZt4> - Jenkins for beginners.
+
+- <https://www.youtube.com/playlistlist=PLiMWaCMwGJXkbN7J_j3qFEZVBacdoYCPJ> - Amazon Elastic Kubernetes Service (EKS) with Terraform.
+
+- [Terraform Documentation](https://developer.hashicorp.com/terraform)
+
+- [Jenkins Documentation](https://www.jenkins.io/doc/)
+
+- [AWS Documentation](https://docs.aws.amazon.com/)
+
+- [Helm Documentation](https://helm.sh/docs/)
+
+- [Prometheus Documentation](https://prometheus.io/docs/introduction/overview/)
+
+- My friends and circle members in AltSchool - Tuyo, Teddy, Pat, Mayowa, Dami.
