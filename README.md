@@ -165,11 +165,13 @@ I have divided the terraform blocks into different files based on the actions th
 
 ## Resources that helped me
 
-- <https://youtu.be/RRdYFwlCHic> - How to request an SSL Certificate from ACM.
+- [AltSchool Africa LMS](https://www.altschoolafrica.com/)
 
-- <https://youtu.be/8IWH1cYVZt4> - Jenkins for beginners.
+- [How to request an SSL Certificate from ACM.](https://youtu.be/RRdYFwlCHic)
 
-- <https://www.youtube.com/playlistlist=PLiMWaCMwGJXkbN7J_j3qFEZVBacdoYCPJ> - Amazon Elastic Kubernetes Service (EKS) with Terraform.
+- [Jenkins for beginners.](<https://youtu.be/8IWH1cYVZt4> )
+
+- [Amazon Elastic Kubernetes Service (EKS) with Terraform.](<https://www.youtube.com/playlistlist=PLiMWaCMwGJXkbN7J_j3qFEZVBacdoYCPJ> )
 
 - [Terraform Documentation](https://developer.hashicorp.com/terraform)
 
