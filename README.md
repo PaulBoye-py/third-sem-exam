@@ -28,7 +28,7 @@ I have divided the terraform blocks into different files based on the actions th
 
   - [`jenkins`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/eks-cluster/jenkins)- I ended up merging all the Jenkins pipeline code to a central file in the root directory.
 
-- The [ingress-rule](https://github.com/PaulBoye-py/third-sem-exam/tree/main/ingress-rule) contains the nginx ingress configuration files for the 2 applications which were deployed.
+- The [nginx-ingress](https://github.com/PaulBoye-py/third-sem-exam/tree/main/nginx-ingress) contains the nginx ingress configuration files for the 2 applications which were deployed.
 
   - [`ingress-rule.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/ingress-rule/ingress-rule.tf) contains the k8s nginx ingress for the `sock-shop` and `azure-vote-front` frontend services which were gotten online.
 
