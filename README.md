@@ -59,3 +59,5 @@ I have divided the terraform blocks into different files based on the actions th
 - [eks-Jenkinsfile](https://github.com/PaulBoye-py/third-sem-exam/blob/main/eks-Jenkinsfile) creates the pipeline for creating and destroying the k8s clusters.
 
 - [Jenkinsfile](https://github.com/PaulBoye-py/third-sem-exam/blob/main/Jenkinsfile) creates the pipeline for creating the deployments for nginx-conroller, prometheus, and the apps.
+
+- [script.sh](https://github.com/PaulBoye-py/third-sem-exam/blob/main/script.sh) installs necessary packages and repos needed for the Jenkins server to run.
