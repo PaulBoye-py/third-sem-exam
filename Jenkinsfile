@@ -52,7 +52,7 @@ pipeline {
         stage("Deploy ingress rule to EKS") {
             steps {
                 script {
-                    dir('ingress-rule') {
+                    dir('nginx-ingress') {
                         sh "terraform init"
                         sh "terraform apply -auto-approve"
                     }

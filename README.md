@@ -2,7 +2,7 @@
 
 ## Folder Structure
 
-I have divided the terraform modules and files into different files based on the actions they perform.
+I have divided the terraform blocks into different files based on the actions they perform.
 
 - The [k8s](https://github.com/PaulBoye-py/third-sem-exam/tree/main/k8s) folder contains the terraform files to provide my k8s cluster called `demo`. Under the `k8s` folder, there are 11 terraform files, each performing different tasks.
 
@@ -36,7 +36,7 @@ I have divided the terraform modules and files into different files based on the
 
   - [`provide.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/ingress-rule/provide.tf) interacts with the resources provided by k8s.
 
-- The [`nginx-controller`](https://github.com/PaulBoye-py/third-sem-exam/tree/main/nginx-controller) contains files create the nginx controller.
+- The [nginx-controller](https://github.com/PaulBoye-py/third-sem-exam/tree/main/nginx-controller) contains files create the nginx controller.
 
   - [`helm-nginx.tf`](https://github.com/PaulBoye-py/third-sem-exam/blob/main/nginx-controller/helm-nginx.tf) creates a k8s namespace called `nginx-namespace`, an instance of a helm chart running in a my k8s `main` cluster.
 
